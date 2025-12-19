@@ -1,0 +1,109 @@
+/* NAVBAR BASE */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f172a;
+  padding: 14px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* LINKS */
+.links a,
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.links a.active {
+ background : 2px solid #38bdf8;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  background: #020617;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.mobile-menu a {
+  padding: 12px 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+/* NAVBAR LINKS */
+.links a,
+.mobile-menu a {
+  position: relative;
+  color: #e5e7eb;
+  text-decoration: none;
+  padding: 8px 4px;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.links a:hover,
+.mobile-menu a:hover {
+  color: #38bdf8;
+}
+
+/* UNDERLINE ANIMATION */
+.links a::after,
+.mobile-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+/* SHOW LINE ON HOVER */
+.links a:hover::after,
+.mobile-menu a:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE PAGE STYLE */
+.links a.active,
+.mobile-menu a.active {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* KEEP LINE VISIBLE FOR ACTIVE PAGE */
+.links a.active::after,
+.mobile-menu a.active::after {
+  width: 100%;
+}
